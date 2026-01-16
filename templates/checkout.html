@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Checkout</h2>
+<p>{{ message }}</p>
+<a href="/">Back to Home</a>
+<form method="POST">
+ <input name="name" placeholder="Name" required><br>
+    <input name="address" placeholder="Address" required><br>
+</form>
+<form method="POST">
+    <button type="submit">Place Order</button>
+</form>
+
+{% endblock %}

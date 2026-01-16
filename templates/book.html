@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2 class="title">Featured Books</h2>
+
+<div class="book-grid">
+    {% for book in books %}
+    <div class="book-card">
+        <h3>{{ book.title }}</h3>
+        <p>₹{{ book.price }}</p>
+        <p>{{ book.description }}</p>
+
+        <a href="{{ url_for('add_to_cart', book_id=book.id) }}">
+            <button>Add to Cart</button>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
